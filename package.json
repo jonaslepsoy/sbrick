@@ -1,0 +1,28 @@
+{
+  "name": "sbrick",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonaslepsoy/sbrick.git"
+  },
+  "keywords": [
+    "lego",
+    "sbrick",
+    "bluetooth"
+  ],
+  "author": "Jonas Lepsøy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonaslepsoy/sbrick/issues"
+  },
+  "homepage": "https://github.com/jonaslepsoy/sbrick",
+  "dependencies": {
+    "keypress": "^0.2.1",
+    "noble": "^1.5.0"
+  }
+}
