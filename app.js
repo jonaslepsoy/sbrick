@@ -50,17 +50,29 @@ process.stdin.on('keypress', function (ch, key) {
     if(key.name === 'x') {
       stop()
     }
-    if(key.name === 'up' && direction === FORWARD) {
-      increaseSpeed()
+    if(key.name === 'up'){
+      if(direction === FORWARD) {
+        increaseSpeed()
+      } else if(direction === BACKWARD) {
+        if(speedIndex === 0){
+          direction = FORWARD
+          increaseSpeed()
+        } else{
+          decreaseSpeed()
+        }
+      }
     }
-    if(key.name === 'w' && speedIndex === 0) {
-      direction = FORWARD
-    }
-    if(key.name === 'down' && direction === BACKWARD){
-      decreaseSpeed()
-    }
-    if(key.name === 's' && speedIndex === 0){
-      direction = BACKWARD
+    if(key.name === 'down'){
+      if(direction === BACKWARD) {
+        increaseSpeed()
+      } else if(direction === FORWARD) {
+        if(speedIndex === 0){
+          direction = BACKWARD
+          increaseSpeed()
+        } else{
+          decreaseSpeed()
+        }
+      }
     }
     if(key.name === 'l'){
       toggleLights(remoteControl)
